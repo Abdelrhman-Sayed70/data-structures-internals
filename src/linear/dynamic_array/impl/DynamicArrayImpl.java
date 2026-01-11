@@ -1,6 +1,6 @@
-package linear.array.impl;
+package linear.dynamic_array.impl;
 
-import linear.array.AbstractArray;
+import linear.dynamic_array.abstracts.AbstractArray;
 
 public class DynamicArrayImpl<T> extends AbstractArray<T> {
     public DynamicArrayImpl(int initialCapacity) {
@@ -73,5 +73,10 @@ public class DynamicArrayImpl<T> extends AbstractArray<T> {
                     return i;
         }
         return -1;
+    }
+
+    @Override
+    public boolean contains(T element) {
+        return indexOf(element) != -1;
     }
 }

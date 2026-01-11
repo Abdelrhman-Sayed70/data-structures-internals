@@ -1,5 +1,5 @@
 package core;
 
-public interface LinearStructure<T> extends Structure {
+public interface LinearStructure<T> extends Structure<T> {
 
 }

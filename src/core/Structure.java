@@ -1,6 +1,6 @@
 package core;
 
-public interface Structure {
+public interface Structure<T> {
     /**
      * Returns the number of elements in the structure.
      * @return number of elements
@@ -19,4 +19,6 @@ public interface Structure {
      * Removes all elements from the structure.
      */
     void clear();
+
+    boolean contains(T element);
 }
