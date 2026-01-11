@@ -1,4 +1,6 @@
-package linear.array;
+package linear.dynamic_array.abstracts;
+
+import linear.dynamic_array.api.DynamicArray;
 
 public abstract class AbstractArray<T> implements DynamicArray<T> {
     protected Object[] data;
@@ -48,21 +50,5 @@ public abstract class AbstractArray<T> implements DynamicArray<T> {
         for (int i = 0; i < size; i++)
             newData[i] = data[i];
         data = newData;
-    }
-
-    protected void checkIndex(int index) {
-        if (index < 0 || index >= size)
-            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
-    }
-
-
-    /**
-     * Check that index to add element in is valid.
-     * Index can be in the range: 0 to size (not size - 1). Size means it will insert at the end of the array
-     * @param index index that new element will be added on
-     */
-    protected void checkIndexForAdd(int index){
-        if (index < 0 || index > size)
-            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
     }
 }
