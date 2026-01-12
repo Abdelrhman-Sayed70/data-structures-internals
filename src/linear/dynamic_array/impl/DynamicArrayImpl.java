@@ -79,4 +79,11 @@ public class DynamicArrayImpl<T> extends AbstractArray<T> {
     public boolean contains(T element) {
         return indexOf(element) != -1;
     }
+
+    @Override
+    public void print() {
+        System.out.println("Printing array/n");
+        for (int i = 0; i < size; i++)
+            System.out.println(data[i]);
+    }
 }

@@ -83,12 +83,15 @@ public abstract class AbstractLinkedList<T, N extends BaseNode<T>> implements Li
         size = 0;
     }
 
-    public void setHead(N head) {
-        this.head = head;
-    }
+    @Override
+    public void print() {
+        System.out.println("Printing linked list/n");
 
-    public void setTail(N tail) {
-        this.tail = tail;
+        N current = head;
+        while (current != null) {
+            System.out.println(current.getData());
+            current = getNextNode(current);
+        }
     }
 
     public N getTail() {

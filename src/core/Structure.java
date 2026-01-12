@@ -21,4 +21,6 @@ public interface Structure<T> {
     void clear();
 
     boolean contains(T element);
+
+    void print();
 }
