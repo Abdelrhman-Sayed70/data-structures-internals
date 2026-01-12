@@ -110,6 +110,11 @@ public class SinglyLinkedListImpl<T> extends AbstractLinkedList<T, SinglyNode<T>
     }
 
     @Override
+    public void add(T element) {
+        addLast(element);
+    }
+
+    @Override
     public SinglyNode<T> getNodeAt(int index) {
         checkIndex(index);
 

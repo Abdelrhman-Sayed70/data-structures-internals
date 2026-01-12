@@ -1,6 +1,6 @@
 package core;
 
-public interface IndexAccessible <T> extends LinearStructure<T> {
+public interface IndexAccessibleStructure<T> extends LinearStructure<T> {
     /**
      * Returns the element at the specified index.
      * @param index the position
@@ -36,6 +36,8 @@ public interface IndexAccessible <T> extends LinearStructure<T> {
      * @return index of element, or -1 if not found
      */
     int indexOf(T element);
+
+    void add(T element);
 
     default void checkIndex(int index) {
         if (index < 0 || index >= size())

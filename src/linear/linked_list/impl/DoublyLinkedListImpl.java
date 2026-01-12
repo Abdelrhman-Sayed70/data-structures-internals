@@ -142,4 +142,9 @@ public class DoublyLinkedListImpl<T> extends AbstractLinkedList<T, DoublyNode<T>
             size++;
         }
     }
+
+    @Override
+    public void add(T element) {
+        addLast(element);
+    }
 }

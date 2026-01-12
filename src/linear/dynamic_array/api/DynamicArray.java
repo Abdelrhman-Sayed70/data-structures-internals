@@ -1,11 +1,10 @@
 package linear.dynamic_array.api;
 
-import core.Appendable;
-import core.IndexAccessible;
+import core.IndexAccessibleStructure;
 import core.LinearStructure;
 import core.Structure;
 
-public interface DynamicArray<T> extends Structure<T>, LinearStructure<T>, IndexAccessible<T>, Appendable<T> {
+public interface DynamicArray<T> extends Structure<T>, LinearStructure<T>, IndexAccessibleStructure<T> {
     /**
      * Returns the current capacity of the dynamic array.
      * Capacity is the internal size of the underlying storage
