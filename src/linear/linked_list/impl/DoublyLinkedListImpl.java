@@ -102,11 +102,44 @@ public class DoublyLinkedListImpl<T> extends AbstractLinkedList<T, DoublyNode<T>
 
     @Override
     public T remove(int index) {
-        return null;
+        checkIndex(index);
+
+        if (index == 0)
+            return removeFirst();
+
+        else if (index == size - 1)
+            return removeLast();
+
+        DoublyNode<T> deletedNode = getNodeAt(index);
+        deletedNode.getPrev().setNext(deletedNode.getNext());
+        deletedNode.getNext().setPrev(deletedNode.getPrev());
+        deletedNode.setNext(null);
+        deletedNode.setPrev(null);
+
+        size--;
+        return deletedNode.getData();
     }
 
     @Override
     public void add(int index, T element) {
+        checkIndexForAdd(index);
 
+        if (index == 0)
+            addFirst(element);
+
+        else if (index == size)
+            addLast(element);
+
+        else {
+            DoublyNode<T> newNode = new DoublyNode<>(element);
+            DoublyNode<T> toBeMovedNode = getNodeAt(index);
+
+            toBeMovedNode.getPrev().setNext(newNode);
+            newNode.setPrev(toBeMovedNode.getPrev());
+            newNode.setNext(toBeMovedNode);
+            toBeMovedNode.setPrev(newNode);
+
+            size++;
+        }
     }
 }
