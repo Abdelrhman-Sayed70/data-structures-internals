@@ -42,9 +42,9 @@ public class DynamicArrayImpl<T> extends AbstractArray<T> {
 
         for(int i = index + 1; i < size; i++)
             data[i - 1] = data[i];
+
         data[size - 1] = null;
         size--;
-
         return removedElement;
     }
 
@@ -82,7 +82,6 @@ public class DynamicArrayImpl<T> extends AbstractArray<T> {
 
     @Override
     public void print() {
-        System.out.println("Printing array/n");
         for (int i = 0; i < size; i++)
             System.out.println(data[i]);
     }

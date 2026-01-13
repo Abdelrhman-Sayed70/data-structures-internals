@@ -30,6 +30,7 @@ public class SinglyLinkedListImpl<T> extends AbstractLinkedList<T, SinglyNode<T>
         size++;
     }
 
+
     @Override
     public T removeFirst() {
         if (size == 0)

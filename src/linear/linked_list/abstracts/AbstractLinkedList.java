@@ -85,8 +85,6 @@ public abstract class AbstractLinkedList<T, N extends BaseNode<T>> implements Li
 
     @Override
     public void print() {
-        System.out.println("Printing linked list/n");
-
         N current = head;
         while (current != null) {
             System.out.println(current.getData());
