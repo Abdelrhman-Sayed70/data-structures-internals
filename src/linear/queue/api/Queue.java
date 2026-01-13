@@ -1,4 +1,6 @@
-package core;
+package linear.queue.api;
+
+import core.LinearStructure;
 
 public interface Queue<T> extends LinearStructure<T> {
     /**
@@ -10,7 +12,6 @@ public interface Queue<T> extends LinearStructure<T> {
 
     /**
      * Removes and returns the front element of the queue.
-     *
      * @return the removed front element
      * @throws RuntimeException if the queue is empty
      */
